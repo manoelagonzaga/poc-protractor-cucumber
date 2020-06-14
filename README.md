@@ -6,7 +6,7 @@
  - crie as pastas:
  	- e2e/reports/json
 	- e2e/reports/html
-	- e2e/reports/screenchot
+	- e2e/reports/screenshot
 
 
 ## Para execução dos testes: 
