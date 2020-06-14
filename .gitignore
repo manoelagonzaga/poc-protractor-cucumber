@@ -1,0 +1,4 @@
+node_modules
+e2e/reports/json/**
+e2e/reports/html/**
+e2e/reports/screenshot/**
