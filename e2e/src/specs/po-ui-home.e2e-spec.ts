@@ -1,22 +1,16 @@
+import { use } from "chai";
+import chaiPlugIn from "chai-as-promised";
 import { Given, Then, When } from "cucumber";
 import { ComponentsPage } from "../page-objects/po-ui-components.po";
 import { GuidePage } from "../page-objects/po-ui-guides.po";
 import { HomePage } from "../page-objects/po-ui-home.po";
 import { Utils } from "../page-objects/utils.po";
-import { use } from "chai";
-import chaiPlugIn from "chai-as-promised";
-import { browser } from "protractor";
 const chai = use(chaiPlugIn);
 const expect = chai.expect;
-
-// use(chaiPlugIn);
-
-//const { Given, When, Then } = require(path.join(__dirname, '..', '..', '..', 'lib', 'cucumberLoader')).load();
 const homepage = new HomePage();
 const utils = new Utils();
 const componentsPage = new ComponentsPage();
 const guidePage = new GuidePage();
-
 
 Given('que acesso a url {string}', async function (url: string) {
     utils.navigateTo(url);
