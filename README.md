@@ -12,7 +12,7 @@
 ## Estrutura de pastas
 
 > - e2e/src/cucumber-features - São armazenadas os arquivos de feature, que possuem os cenários escritos em gherkin
-> - e2e/src/page-objects - São armazenados as páginas com os atributos e comportamentos de uma página
+> - e2e/src/page-objects - São armazenados as classes com os atributos e comportamentos de uma página
 > - e2e/src/specs - São armazenados os passos dos cenários da feature (step definitions)
 
 ## Para execução dos testes
