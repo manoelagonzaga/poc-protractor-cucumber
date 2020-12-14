@@ -56,10 +56,11 @@ exports.config = {
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
-        require: ['./src/specs/*.ts'],
+        require: ['./src/specs/meu-rh-home.e2e-spec.ts'],
         format: "json:./e2e/reports/json/cucumber_report.json",
         strict: true,
-        tags: "@home or @wip"
+        tags: ["@cards-home"],
+        // retry: 2
     },
 
     onComplete: function () {
@@ -100,6 +101,6 @@ function getDate() {
     if (mm < 10) {
         mm = '0' + mm;
     }
-    today = `${dd}-${mm}-${yyyy}_${hora}-${minutos}-${segundos}`;
+    today = `${dd}-${mm}-${yyyy}_${hora}.${minutos}.${segundos}`;
     return today;
 }

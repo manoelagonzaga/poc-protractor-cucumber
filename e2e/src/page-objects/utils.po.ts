@@ -7,6 +7,7 @@ export class Utils {
      * @param url - Url que deseja acessar, se diferente de baseUrl
      */
     navigateTo(url: string = browser.baseUrl) {
+        browser.manage().timeouts().implicitlyWait(2_000);
         return browser.get(`${url}`);
     }
 

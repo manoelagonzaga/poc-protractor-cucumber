@@ -1,4 +1,4 @@
-import { by, element, ElementFinder } from 'protractor';
+import { by, element, ElementFinder, promise } from 'protractor';
 
 export class HomePage {
 
@@ -14,23 +14,23 @@ export class HomePage {
     /**
      * Retorna o título principal (h1) da página inicial
      */
-    getPageTitle() {
+    getPageTitle(): promise.Promise<string> {
         return  this.pageTitle.getText();
     }
 
-    pageTitleIsDisplayed() {
+    pageTitleIsDisplayed(): promise.Promise<boolean> {
         return this.pageTitle.isDisplayed();
     }
 
-    clickOnBtnMenu() {
+    clickOnBtnMenu(): promise.Promise<void> {
         return this.btnMenu.click();
     }
 
-    getSpecificMenuItem(menuItem: string) {
+    getSpecificMenuItem(menuItem: string): promise.Promise<string> {
         return this.menuItem(menuItem).getText();
     }
 
-    clickOnSpecificMenuItem(menuItem: string) {
+    clickOnSpecificMenuItem(menuItem: string): promise.Promise<void> {
         return this.menuItem(menuItem).click();
     }
 }
